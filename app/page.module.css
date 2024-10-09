@@ -1,0 +1,78 @@
+/* app/page.module.css */
+.container {
+    min-height: 100vh; /* Full viewport height */
+    background-image: url('/toyga.jpg'); /* Background Image */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* No repeat */
+    background-size: contain; /* Ensure the entire image is visible */
+    background-color: black; /* Fallback color */
+    color: white;
+    padding: 2rem 0; /* Optional padding for top and bottom */
+  }
+  
+  /* Navigation Bar Styling */
+  .navbar {
+     display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem; /* Normalized padding for the navbar */
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed; /* Keep the navbar fixed at the top */
+  top: 0; /* Start from the top */
+  left: 0; /* Align with the left edge */
+  right: 0; /* Align with the right edge */
+  z-index: 1; /* Ensure it is above other content */
+  }
+  
+  /* Logo Section - Text Style */
+  .logo {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    color: #ff9800;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Menu Styling */
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  .menu li a:hover {
+    color: #ff9800;
+  }
+  
+  /* Mobile Menu Icon (Hamburger Icon) */
+  .mobileMenuIcon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.4rem;
+  }
+  
+  .mobileMenuIcon span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+    }
+  
+    .mobileMenuIcon {
+      display: flex;
+    }
+  }
+  
