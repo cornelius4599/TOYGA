@@ -1,0 +1,80 @@
+/* Header.module.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #000; /* Dark color matching logo background */
+    color: #fff; /* White text color for contrast */
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .link {
+    margin-left: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff; /* White text to match the background */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .link:hover {
+    color: #ffcc00; /* Change color on hover */
+  }
+  
+  /* Hamburger styles */
+  .hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff; /* White color for lines */
+    margin: 4px 0; /* Space between lines */
+    transition: all 0.3s ease; /* Smooth transition for animation */
+  }
+  
+  /* Active styles for lines */
+  .active {
+    background-color: #ffcc00; /* Change color when active */
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex; /* Show hamburger on mobile */
+    }
+  
+    .nav {
+      display: none; /* Hide nav links by default */
+      flex-direction: column; /* Stack links vertically */
+      width: 100%; /* Full width for nav */
+      position: absolute; /* Absolute positioning */
+      top: 60px; /* Position below the header */
+      left: 0;
+      background-color: #000; /* Same background as header */
+      z-index: 10; /* Ensure it’s above other content */
+    }
+  
+    .nav.open {
+      display: flex; /* Show nav when open */
+    }
+  
+    .link {
+      margin: 10px 0; /* Margin between links */
+      text-align: center; /* Center text for mobile */
+    }
+  }
+  

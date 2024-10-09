@@ -1,11 +1,20 @@
+"use client"
+
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
+import styles from './Header.module.css';
 
 const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
   return (
-    <header style={headerStyle}>
-      <div style={logoContainer}>
+    <header className={styles.header}>
+      <div className={styles.logoContainer}>
         <Image
           src="/logo.jpg"
           alt="TOYGA Logo"
@@ -13,39 +22,19 @@ const Header: React.FC = () => {
           height={80}
         />
       </div>
-      <nav style={navStyle}>
-        <Link href="#about" style={linkStyle}>About</Link>
-        <Link href="#events" style={linkStyle}>Events</Link>
+
+      <div className={styles.hamburger} onClick={toggleMenu}>
+        <div className={`${styles.line} ${isMenuOpen ? styles.active : ''}`}></div>
+        <div className={`${styles.line} ${isMenuOpen ? styles.active : ''}`}></div>
+        <div className={`${styles.line} ${isMenuOpen ? styles.active : ''}`}></div>
+      </div>
+
+      <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>
+        <Link href="#about" className={styles.link} onClick={toggleMenu}>About</Link>
+        <Link href="#events" className={styles.link} onClick={toggleMenu}>Events</Link>
       </nav>
     </header>
   );
-};
-
-const headerStyle: React.CSSProperties = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  padding: '10px 20px',
-  width: '100%',
-  backgroundColor: '#000', // Brown color matching logo background
-  color: '#fff', // White text color for contrast
-};
-
-const logoContainer: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-};
-
-const navStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-};
-
-const linkStyle: React.CSSProperties = {
-  marginLeft: '20px',
-  fontSize: '18px',
-  textDecoration: 'none',
-  color: '#fff', // White text to match the brown background
 };
 
 export default Header;

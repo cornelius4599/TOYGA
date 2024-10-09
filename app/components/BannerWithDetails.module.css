@@ -1,0 +1,83 @@
+/* BannerWithDetails.module.css */
+
+.splitScreen {
+    display: flex;
+    flex-direction: column; /* Stack vertically on small screens */
+    height: 100vh; /* Full height for mobile */
+  }
+  
+  @media (min-width: 768px) {
+    .splitScreen {
+      flex-direction: row; /* Switch to row layout on larger screens */
+      height: 70vh; /* Adjust height for larger screens */
+    }
+  }
+  
+  .banner {
+    flex: 1;
+    position: relative;
+    height: 50vh; /* Set height for mobile view */
+  }
+  
+  @media (min-width: 768px) {
+    .banner {
+      height: 100%; /* Full height for desktop view */
+    }
+  }
+  
+  .details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFF6E5; /* Light gray for contrast */
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .details {
+      text-align: left; /* Align text to the left on larger screens */
+      padding: 40px; /* Increased padding for desktop view */
+    }
+  }
+  
+  .heading {
+    font-size: 32px; /* Smaller size for mobile */
+  }
+  
+  @media (min-width: 768px) {
+    .heading {
+      font-size: 48px; /* Larger size for desktop */
+    }
+  }
+  
+  .paragraph {
+    font-size: 16px; /* Smaller size for mobile */
+  }
+  
+  @media (min-width: 768px) {
+    .paragraph {
+      font-size: 18px; /* Larger size for desktop */
+    }
+  }
+  
+  .button {
+    font-size: 16px; /* Smaller button size for mobile */
+    padding: 10px 20px; /* Smaller padding for mobile */
+    background-color: #873600; /* Brown color for the button */
+    color: #fff; /* White text for the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  @media (min-width: 768px) {
+    .button {
+      font-size: 20px; /* Larger button size for desktop */
+      padding: 10px 30px; /* Larger padding for desktop */
+    }
+  }
+  

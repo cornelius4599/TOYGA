@@ -1,0 +1,71 @@
+/* Footer.module.css */
+
+.footer {
+    background-color: #000; /* Dark brown color for the footer */
+    color: #fff; /* White text */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack sections vertically on mobile */
+    align-items: center; /* Center items vertically */
+  }
+  
+  @media (min-width: 768px) {
+    .footer {
+      flex-direction: row; /* Switch to row layout on larger screens */
+      justify-content: space-between; /* Spread content evenly */
+    }
+  }
+  
+  .footerContent {
+    display: flex;
+    flex-direction: column; /* Stack sections on mobile */
+    width: 100%;
+    max-width: 1200px; /* Limit the max width of the footer content */
+    margin: 0 auto; /* Center the footer content */
+  }
+  
+  @media (min-width: 768px) {
+    .footerContent {
+      flex-direction: row; /* Switch to row layout on larger screens */
+    }
+  }
+  
+  .footerSection {
+    flex: 1; /* Each section will take equal space */
+    padding: 0 20px; /* Add some horizontal padding */
+    text-align: center; /* Center text on mobile */
+  }
+  
+  @media (min-width: 768px) {
+    .footerSection {
+      text-align: left; /* Align text to the left on larger screens */
+    }
+  }
+  
+  .footerHeading {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; /* Poppins font for the footer heading */
+  }
+  
+  .footerText {
+    font-size: 14px;
+    margin: 5px 0;
+    font-family: 'Poppins', sans-serif; /* Poppins font for the footer text */
+  }
+  
+  .socialLinks {
+    margin: 10px 0;
+  }
+  
+  .link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #ffcc00; /* Change color on hover */
+  }
+  
